@@ -47,6 +47,7 @@ sudo cp task2/my-backup /etc/cron.d
 Для проверки работы crontab зделаем запуск раз в минуту `* * * * * root /usr/local/bin/backup_home.sh` 
 
 ![crontab](img/task2_3.png)
+
 ---
 
 ## Задания со звёздочкой*
@@ -60,6 +61,13 @@ sudo cp task2/my-backup /etc/cron.d
 - На проверку направьте команду и результат ее выполнения в виде скриншота
 
 ---
+
+Команда `rsync -a --bwlimit=1M --progress Загрузки/code_1.109.3-1770920364_amd64.deb maksim@192.168.56.101:/tmp/backup
+`
+
+Результат 
+
+![limit](img/task3_1.png)
 
 ---
 
