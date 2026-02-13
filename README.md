@@ -8,6 +8,16 @@
 - На проверку направить скриншот с командой и результатом ее выполнения
 
 ---
+Команда
+
+`rsync --stats -ac --exclude '.*/' . /tmp/backup/`
+
+Результат
+
+![Выплнение команды](img/task1_1.png)
+![Содержимое](img/task1_2.png)
+
+--stats - используется для демонстрации чтобы увидить статистику выполнения
 
 ---
 
@@ -19,7 +29,24 @@
 - На проверку направить файл crontab и скриншот с результатом работы утилиты.
 
 ---
+ [Скрипт](task2/backup.sh) должен находится в папке `/usr/local/bin`, а [my-backup](/task2/my-backup) в папке `/etc/cron.d`
+ 
+ ```
+sudo cp task2/backup.sh /usr/local/bin/
+sudo chmod +x /usr/local/bin/backup.sh 
+sudo cp task2/my-backup /etc/cron.d
+ ```
+Результат
 
+![Выплнение команды](img/task2_1.png)
+
+Прерывание скипта ctrl+C
+
+![Выплнение команды](img/task2_2.png)
+
+Для проверки работы crontab зделаем запуск раз в минуту `* * * * * root /usr/local/bin/backup_home.sh` 
+
+![crontab](img/task2_3.png)
 ---
 
 ## Задания со звёздочкой*
